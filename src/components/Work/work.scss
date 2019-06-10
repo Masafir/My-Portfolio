@@ -1,0 +1,12 @@
+@import 'src/styles/vars';
+
+#work {
+  background: url(https://source.unsplash.com/random/1920x1080) no-repeat;
+  background-size: cover;
+  .anim{
+		@extend %anim-slideUp;
+		background: rgba(#fff, 0.8);
+}
+	.content-section{
+border-bottom: 1px solid black;
+}}

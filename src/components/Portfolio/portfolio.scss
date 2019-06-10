@@ -1,0 +1,9 @@
+@import 'src/styles/vars';
+
+#main{
+	@extend %slide;
+}
+.navOpen{
+	#main{
+		transform: translateX($sidebar-width);
+}}

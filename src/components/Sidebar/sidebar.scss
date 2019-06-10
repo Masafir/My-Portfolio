@@ -1,0 +1,69 @@
+@import 'src/styles/vars';
+
+#sidebar {
+  @extend %slide;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: $sidebar-width;
+  left: -($sidebar-width);
+  font-size: .9rem;
+  background: $bg-dark;
+  color: $text-light;
+
+  .sidebar-item {
+    padding: 1.5em;
+  }
+}
+
+#sidebar-toggle {
+  z-index: 10;
+  transition: $transition-duration;
+  background: $bg-light;
+  color: $text-color;
+  padding: .1em .7em;
+  border-radius: .3em;
+  position: fixed;
+  font-size: 1.2em;
+  left: 1em;
+  top: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($bg-dark, 10%);
+    color: $brand-color;
+  }
+}
+
+.navOpen {
+  #sidebar {
+    transform: translateX($sidebar-width);
+  }
+
+  #sidebar-toggle {
+    background: $bg-dark;
+    color: $brand-color;
+    transform: translateX($sidebar-width);
+  }
+}
+
+.sidebar-nav {
+  &-link {
+    color: $nav-link-color;
+    padding: .93em 1.5em;
+    border-bottom: 1px solid $border-dark;
+    display: block;
+
+    &:first-child {
+
+      border-top: 1px solid $border-dark
+    }
+
+    &:hover,
+    &.active {
+      background: lighten($bg-dark, 5%);
+      color: $brand-color;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import 'reset';
+@import 'vars';
+
+body {
+	background: $bg-color;
+	color: $text-color;
+	font-family: "PT Sans", serif;
+	font-weight: 400;
+	line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.external-link {
+	color: lighten($brand-color, 50%);
+	border-bottom: 1px dotted lighten($brand-color, 50%);
+	&:hover {
+		color: $brand-color;
+    border-color: $brand-color;
+  }
+}
+.content {
+	@extend %anim-fadeIn;
+	margin: 0 auto;
+  padding: 1em 20%;
+
+	&-section {
+		padding: 1em 2em;
+		p {
+			margin-bottom: 1em;
+    }
+  }
+
+	&-title {
+		font-size: 2em;
+  }
+
+  &-subtitle {
+		font-size: 1.5em
+  }
+
+  &-img {
+    max-width: 100%;
+  }
+}
+.container {
+	font-family: 'Bree Serif', serif;
+}
+.center {
+	text-align: center;
+}

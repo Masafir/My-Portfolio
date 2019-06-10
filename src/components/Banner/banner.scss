@@ -1,0 +1,13 @@
+@import 'src/styles/vars';
+
+.banner {
+  background: $brand-color;
+  padding: 1em;
+  font-size: 1.3em;
+  text-align: center;
+
+  em {
+    color: $text-dark;
+    font-weight: 700;
+  }
+}

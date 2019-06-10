@@ -1,0 +1,54 @@
+// Variables CSS
+$brand-color-alt: #ff3860;
+$brand-color: hsl(48, 100%, 65%);
+$nav-link-color: #fff;
+$text-dark: #333;
+$text-em: #222;
+$text-color: #555;
+$text-light: #999;
+$bg-dark: #222;
+$bg-color: #fafafa;
+$bg-light: #fff;
+$border-color: #eee;
+$border-dark: #444;
+$sidebar-width: 15rem;
+$transition-duration: .6s;
+$transition-duration-fast: .3s;
+$transition-duration-slow: .9s;
+
+@keyframes slideUp{
+	0% {
+		bottom: -3em;
+    opacity: 0;
+  }
+	100% {
+
+		opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+	100%{
+    opacity: 1;
+  }
+}
+%anim-fadeIn {
+	animation-name: fadeIn;
+	animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+%anim-slideUp {
+  position: relative;
+	animation-name: slideUp;
+	animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+%slide {
+	transition: transform $transition-duration;
+}
